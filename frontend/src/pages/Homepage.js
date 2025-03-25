@@ -5,10 +5,15 @@ import styled from 'styled-components';
 import Students from "../assets/students.svg";
 import { LightPurpleButton } from '../components/buttonStyles';
 import Nav from './navbar';
+import About from './about';
+import ContactUs from './contact';
+
+
 
 const Homepage = () => {
     return (
         <>
+        <section id='home'>
             <Nav/>
             <StyledContainer>
                 <Grid container spacing={4} alignItems="center">
@@ -55,6 +60,10 @@ const Homepage = () => {
                     </Grid>
                 </Grid>
             </StyledContainer>
+            <About/>
+            <ContactUs/>
+
+            </section>
         </>
     );
 };

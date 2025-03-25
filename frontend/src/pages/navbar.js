@@ -1,28 +1,79 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 import { LightPurpleButton } from '../components/buttonStyles';
 import { AppBar, Toolbar, Container, Grid, Box, Button, Typography } from '@mui/material';
-// import {} from 'react-router-dom';
+
 
 
 const Nav = () => {
+
+const navigate = useNavigate();
+
+const handleHomeClick = () => {
+    navigate("/");
+    setTimeout(() => {
+        const section = document.getElementById('home');
+        if(section){
+            section.scrollIntoView({ behavior: 'smooth' });
+        }
+    }, 100);
+    }
+
+const handleAboutClick = () => {
+navigate("/");
+setTimeout(() => {
+    const section = document.getElementById('about');
+    if(section){
+        section.scrollIntoView({ behavior: 'smooth' });
+    }
+}, 100);
+}
+
+const handleContactClick = () => {
+    navigate("/");
+    setTimeout(() => {
+        const section = document.getElementById('contact');
+        if(section){
+            section.scrollIntoView({ behavior: 'smooth' });
+        }
+    }, 100);
+    }
   return (
     <Navbar>
                 <Toolbar>
                     <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
                     M S Memorial Public School
                     </Typography>
-                    <StyledNavLink to="/">
+                    <button  style={{
+                            all: "unset",  // Removes default styles
+                            cursor: "pointer", 
+                            padding: "8px 12px", 
+                            borderRadius: "4px"
+                        }} onClick={handleHomeClick}>
+                    <StyledNavLink>
                         Home
-                    </StyledNavLink>
-                    <StyledNavLink to="/about">
+                    </StyledNavLink></button>
+                    <button  style={{
+                            all: "unset",  // Removes default styles
+                            cursor: "pointer", 
+                            padding: "8px 12px", 
+                            borderRadius: "4px"
+                        }} onClick={handleAboutClick}><StyledNavLink >
                         About
-                    </StyledNavLink>
-                    <StyledNavLink to="/ContactUs">
+                    </StyledNavLink></button>
+
+                    <button   style={{
+                            all: "unset",  // Removes default styles
+                            cursor: "pointer", 
+                            padding: "8px 12px", 
+                            borderRadius: "4px"
+                        }} onClick={handleContactClick}><StyledNavLink>
                         Contact
-                    </StyledNavLink>
+                    </StyledNavLink></button>
+                    
                     <StyledNavLink to="/choose">
                         Login
                     </StyledNavLink>

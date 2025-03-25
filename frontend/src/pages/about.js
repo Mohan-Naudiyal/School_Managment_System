@@ -4,6 +4,7 @@ import Navbar from './navbar';
 
 const About = () => {
   return (
+    <section id='about'>
     <div>
       <Navbar/>
       <div style={styles.container}>
@@ -77,12 +78,13 @@ const About = () => {
       </section>
     </div>
     </div>
+    </section>
   );
 };
 
 // Updated team data
 const teamData = [
-  { id: 1, name: 'Dr. Emily Carter', role: 'Principal', image: 'https://images.firstpost.com/wp-content/uploads/2017/04/Akshay-Kumar-Copy.jpg?im=FitAndFill=(596,336)' },
+  { id: 1, name: 'Er Mohan Naudiyal', role: 'Principal', image: 'https://images.firstpost.com/wp-content/uploads/2017/04/Akshay-Kumar-Copy.jpg?im=FitAndFill=(596,336)' },
   { id: 2, name: 'Mr. Andrew Lee', role: 'Vice Principal', image: 'https://cdn.dnaindia.com/sites/default/files/2024/12/04/2665166-image-2024-12-04t061354.614.jpg?im=FitAndFill=(1200,900)' },
   { id: 3, name: 'Ms. Sarah Johnson', role: 'Head of Science Department', image: 'https://upload.wikimedia.org/wikipedia/commons/6/6e/Shah_Rukh_Khan_graces_the_launch_of_the_new_Santro.jpg' },
   { id: 4, name: 'Mr. Daniel Brown', role: 'Athletic Director', image: 'https://img.etimg.com/thumb/msid-92570973,width-650,height-488,imgsize-46526,resizemode-75/aditya-roy-kapur.jpg' },

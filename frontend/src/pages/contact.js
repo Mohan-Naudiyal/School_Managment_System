@@ -8,6 +8,7 @@ import Nav from './navbar';
 
 const ContactUs = () => {
     return (
+        <section id='contact'>
       
         <StyledContainer>
           <Nav/>
@@ -87,6 +88,7 @@ const ContactUs = () => {
                 </Grid>
             </Grid>
         </StyledContainer>
+        </section>
     );
 };
 
